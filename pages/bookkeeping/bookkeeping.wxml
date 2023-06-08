@@ -1,0 +1,68 @@
+<!-- 记账 -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="selection-area">
+    <picker name="pickerDate" class="trans-date-select" mode="date" value="{{date}}" bindchange="bindDateChange">
+      <text class="selection-text">日期：</text>
+      <text class="trans-date">{{date}}</text>
+    </picker>
+    <view class="trans-tags-area">
+      <text class="selection-text">交易类型：</text>
+      <view class="trans-tags">
+        <block wx:for="{{transTypes}}" wx:key="id">
+        <view class='{{item.checked?"trans-tag-checked-button":"trans-tag-button"}}'  bindtap='transTypeTap' data-id='{{item.id}}'>{{item.name}}</view>
+      </block>
+      </view>
+    </view>
+    <view class="trans-tags-area">
+      <text class="selection-text">交易渠道：</text>
+      <view class="trans-tags">
+        <block wx:for="{{transChannels}}" wx:key="id">
+        <view class='{{item.checked?"trans-tag-checked-button":"trans-tag-button"}}'  bindtap='transChannelTap' data-id='{{item.id}}'>{{item.name}}</view>
+      </block>
+      </view>
+    </view>
+    <view class="trans-tags-area">
+      <text class="selection-text">标签：</text>
+      <view class="trans-tags">
+        <block wx:for="{{transTags}}" wx:key="id">
+          <view class='{{item.checked?"trans-tag-checked-button":"trans-tag-button"}}'  bindtap='transTagTap' data-id='{{item.id}}'>{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="trans-tags-area">
+      <text class="selection-text">分类：</text>
+      <view class="trans-tags">
+        <block wx:for="{{transCategories}}" wx:key="id">
+          <view class='{{item.checked?"trans-tag-checked-button":"trans-tag-button"}}'  bindtap='transCategoryTap' data-id='{{item.id}}'>{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="trans-tags-area">
+      <text class="selection-text">摘要：</text>
+      <view class="trans-tags">
+        <block wx:for="{{transAbstracts}}" wx:key="id">
+          <view class='{{item.checked?"trans-tag-checked-button":"trans-tag-button"}}'  bindtap='transAbstractTap' data-id='{{item.id}}'>{{item.name}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="trans-amount">
+      <text class="selection-text">金额：</text>
+      <input name="inputPrice" value="{{transAmount}}" type="digit" bindinput="priceEdit" adjust-position="true" class="trans-amount-input"/>
+    </view>
+    <view class="trans-remark">
+      <text class="selection-text">内容：</text>
+      <textarea name="textareaContent" value="{{transContent}}" bindinput="getContentLength" adjust-position="true" maxlength="{{maxWordLength}}" class="remark-input"/>
+      <text class="remark-length">{{contentLength}} / {{maxWordLength}}</text>
+    </view>
+    <view class="trans-remark">
+      <text class="selection-text">备注：</text>
+      <textarea name="textareaRemark" value="{{transRemark}}" bindinput="getRemarkLength" adjust-position="true" maxlength="{{maxWordLength}}" class="remark-input"/>
+      <text class="remark-length">{{remarkLength}} / {{maxWordLength}}</text>
+    </view>
+  </view>
+
+  <view class="button-area">
+    <button form-type="reset" class="cancel-btn">取消</button>
+    <button form-type="submit" class="submit-btn">记录入账</button>
+  </view>
+</form>

@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/bookkeeping/bookkeeping",
+        "pages/billingRecord/billingRecord",
+        "pages/profile/profile"
+    ],
+    "subpackages": [
+      {
+        "root": "homePackage",
+        "pages": [
+          "pages/help/help"
+        ]
+      }, {
+        "root": "profilePackage",
+        "pages": [
+          "pages/annual/annual",
+          "pages/tagsManage/tagsManage",
+          "pages/billExport/billExport",
+          "pages/about/about"
+        ]
+      }
+    ],
+    "preloadRule": {
+      "pages/home/home": {
+        "packages": ["homePackage"]
+      },
+      "pages/profile/profile": {
+        "packages": ["profilePackage"]
+      }
+    },
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ccccff",
+        "navigationBarTitleText": "EG记账",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#fff"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/images/tabBar/home.png",
+                "selectedIconPath": "/images/tabBar/home_active.png"
+            },
+            {
+                "pagePath": "pages/bookkeeping/bookkeeping",
+                "text": "记账",
+                "iconPath": "/images/tabBar/bookkeeping.png",
+                "selectedIconPath": "/images/tabBar/bookkeeping_active.png"
+            },
+            {
+                "pagePath": "pages/billingRecord/billingRecord",
+                "text": "账本",
+                "iconPath": "/images/tabBar/billingRecord.png",
+                "selectedIconPath": "/images/tabBar/billingRecord_active.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "个人中心",
+                "iconPath": "/images/tabBar/profile.png",
+                "selectedIconPath": "/images/tabBar/profile_active.png"
+            }
+        ],
+        "selectedColor": "#9b5bdb"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

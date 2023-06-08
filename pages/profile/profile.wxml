@@ -1,0 +1,27 @@
+<!-- 个人中心 -->
+<view>
+  <!-- 个人信息 -->
+  <user-profile viewType="right"></user-profile>
+  <!-- 使用记录 -->
+  <view class="user-record">
+    <view>
+      <text class="record-item">{{useDays}}</text>
+      <text>使用天数</text>
+    </view>
+    <view>
+      <text class="record-item">{{transRecordDays}}</text>
+      <text>记账天数</text>
+    </view>
+    <view>
+      <text class="record-item">{{transRecordCount}}</text>
+      <text>记账笔数</text>
+    </view>
+  </view>
+  <!-- 菜单选项 -->
+  <view>
+    <view class="menu-item" wx:for="{{menuList}}" wx:key="index" bindtap="menuTap" data-index='{{index}}'>
+      <text>{{item.name}}</text>
+      <image src="/images/common/arrow_right.png" mode="" class="icon-arrow-right" />
+    </view>
+  </view>
+</view>

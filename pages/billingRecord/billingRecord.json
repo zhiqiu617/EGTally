@@ -1,0 +1,10 @@
+{
+    "usingComponents": {
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "transaction-record-item": "/components/content/transactionRecordItem/TransactionRecordItem"
+    },
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#9999CC",
+    "backgroundTextStyle": "dark"
+}

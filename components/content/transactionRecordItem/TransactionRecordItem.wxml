@@ -1,0 +1,11 @@
+<!--components/content/transactionRecordItem/TransactionRecordItem.wxml-->
+<view class="trans-record" wx:for="{{userBills}}" wx:key="index">
+  <view class="trans-top">
+    <view class="trans-date">{{item.transDate}}</view>
+    <view class="trans-channel">{{item.transChannelName}}</view>
+  </view>
+  <view class="trans-bottom">
+    <view class="trans-tag">{{item.transTagName}}-{{item.transCategoryName}}-{{item.transAbstractName}}</view>
+    <view class="{{item.transTypeName === '收入' ? 'trans-amount-income' : 'trans-amount'}}">{{item.transAmount}}</view>
+  </view>
+</view>

@@ -1,0 +1,18 @@
+<!-- 首页 -->
+<view class="container">
+  <user-profile viewType="bottom"></user-profile>
+  <block>
+    <navigator url="/pages/bookkeeping/bookkeeping" open-type="switchTab">
+      <view class="menu-item">记账</view>
+    </navigator>
+    <navigator url="/pages/billingRecord/billingRecord" open-type="switchTab">
+      <view class="menu-item">历史账单</view>
+    </navigator>
+    <navigator url="/pages/profile/profile" open-type="switchTab">
+      <view class="menu-item">个人中心</view>
+    </navigator>
+    <navigator url="/homePackage/pages/help/help">
+      <view class="menu-item">帮助</view>
+    </navigator>
+  </block>
+</view>

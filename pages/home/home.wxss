@@ -1,0 +1,17 @@
+/* 首页 */
+.container {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+/* 菜单选项 */
+.menu-item {
+    margin: 40rpx auto;
+    text-align: center;
+    width: 280rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: var(--high-tint-bgc);
+    box-shadow: 6rpx 6rpx var(--high-tint-color);
+    border-radius: 10rpx;
+}

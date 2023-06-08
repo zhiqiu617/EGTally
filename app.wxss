@@ -1,0 +1,10 @@
+/**app.wxss**/
+page {
+    --high-tint-bgc: #ccccff;
+    --high-tint-color: #9b5bdb;
+    --border-line-thin: #efefef;
+    --border-line-thick: #f1f1f1;
+
+    height: 100vh;
+    color: #222222;
+}

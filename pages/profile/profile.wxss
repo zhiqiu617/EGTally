@@ -1,0 +1,39 @@
+/* 个人中心 */
+
+/* 使用记录 */
+.user-record {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--high-tint-bgc);
+    border-bottom: 10rpx var(--border-line-thick) solid;
+}
+.user-record view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40rpx 0;
+}
+.user-record view:nth-child(1), .user-record view:nth-child(2) {
+    border-right: 1rpx var(--border-line-thin) solid;
+}
+.record-item {
+  font-size: 40rpx;
+}
+
+/* 菜单选项 */
+.menu-item {
+    position: relative;
+    padding: 0 26rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    border-bottom: 1rpx var(--border-line-thin) solid;
+}
+.icon-arrow-right {
+    position: absolute;
+    top: 14rpx;
+    right: 0;
+    width: 60rpx;
+    height: 60rpx;
+}

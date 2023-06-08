@@ -1,0 +1,106 @@
+/* 记账 */
+.selection-area {
+  margin: 0 20rpx;
+}
+.selection-text {
+  margin-right: 20rpx;
+  margin-top: 15rpx;
+}
+
+/* 日期 */
+.trans-date-select {
+  padding: 40rpx 0;
+}
+.trans-date {
+  padding: 10rpx 50rpx;
+  border: 2rpx var(--border-line-thin) solid;
+  border-radius: 10rpx;
+}
+/* 交易类型 and 标签 and 分类 and 摘要 */
+.trans-tags-area {
+  display: flex;
+  margin: 20rpx 0;
+}
+.trans-tags {
+  width: 72%;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* tap按钮 */
+.trans-tag-checked-button, .trans-tag-button {
+  padding: 10rpx 20rpx;
+  margin: 8rpx;
+  text-align: center;
+  border: 2rpx var(--high-tint-color) solid;
+  border-radius: 50rpx;
+  font-size: 28rpx;
+}
+/* 按钮选中 */
+.trans-tag-checked-button {
+  background-color: var(--high-tint-color);
+  color: #fff;
+}
+/* 按钮未选中 */
+.trans-tag-button {
+  color: var(--high-tint-color);
+}
+
+/* 金额 */
+.trans-amount {
+  display: flex;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.trans-amount-input {
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: right;
+  margin-top: 12rpx;
+  padding: 0 10rpx;
+  border: 2rpx var(--border-line-thin) solid;
+  border-radius: 10rpx;
+}
+
+/* 备注 */
+.trans-remark {
+  display: flex;
+  position: relative;
+  height: 260rpx;
+}
+.remark-input {
+  margin-top: 10rpx;
+  width: 82%;
+  height: 200rpx;
+  border: 2rpx var(--border-line-thin) solid;
+  border-radius: 10rpx;
+}
+.remark-length {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 15rpx;
+  color: #acabab;
+}
+
+/* 提交按钮 */
+.button-area {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80rpx 0;
+}
+.submit-btn, .cancel-btn {
+  width: 300rpx !important;
+  padding: 16rpx 16rpx;
+  margin-left: 10rpx !important;
+  margin-right: 10rpx !important;
+  border: 2rpx var(--high-tint-color) solid;
+  border-radius: 10rpx;
+}
+.submit-btn {
+  color: var(--high-tint-color);
+}
+.cancel-btn {
+  color: #494949;
+}

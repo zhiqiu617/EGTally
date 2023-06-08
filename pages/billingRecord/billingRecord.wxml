@@ -1,0 +1,14 @@
+<!-- 账本 -->
+<view>
+  <van-tabs sticky active="{{currentIndex}}" bind:change="onChange">
+    <van-tab title="全部">
+      <transaction-record-item userBills="{{userAllBills}}"></transaction-record-item>
+    </van-tab>
+    <van-tab title="收入">
+      <transaction-record-item userBills="{{userIncomeBills}}"></transaction-record-item>
+    </van-tab>
+    <van-tab title="支出">
+      <transaction-record-item userBills="{{userExpenditureBills}}"></transaction-record-item>
+    </van-tab>
+  </van-tabs>
+</view>

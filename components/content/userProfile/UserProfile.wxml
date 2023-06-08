@@ -1,0 +1,49 @@
+<!--components/content/userProfile/UserProfile.wxml-->
+<view class="user-profile" wx:if="{{viewType === 'bottom'}}">
+  <block wx:if="{{!isGetUserProfile}}">
+    <block wx:if="{{canIUseGetUserProfile}}">
+      <view class="user-info" bindtap="getUserProfile">
+        <image class="user-avatar" src="/images/common/init_avatar.png" mode="" />
+        <text>点击登录</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="user-info" bindtap="getUserProfile">
+        <image class="user-avatar" src="/images/common/init_avatar.png" mode="" />
+        <text>登录受限</text>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="user-info">
+      <image class="user-avatar" src="{{userProfile.avatarUrl}}" mode="" />
+      <text>{{userProfile.nickName}}</text>
+    </view>
+  </block>
+</view>
+
+<view wx:else>
+  <block wx:if="{{!isGetUserProfile}}">
+    <block wx:if="{{canIUseGetUserProfile}}">
+      <view class="user-info-view2" bindtap="getUserProfile">
+        <image class="user-avatar-view2" src="/images/common/init_avatar.png" mode="" />
+        <text>点击登录</text>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="user-info-view2" bindtap="getUserProfile">
+        <image class="user-avatar-view2" src="/images/common/init_avatar.png" mode="" />
+        <text>登录受限</text>
+      </view>
+    </block>
+  </block>
+  <block wx:else>
+    <view class="user-info-view2">
+      <image class="user-avatar-view2" src="{{userProfile.avatarUrl}}" mode="" />
+      <view class="user-info-text">
+        <text class="user-info-name">{{userProfile.nickName}}</text>
+        <text class="user-info-date">上次使用：{{lastUserDate}}</text>
+      </view>
+    </view>
+  </block>
+</view>

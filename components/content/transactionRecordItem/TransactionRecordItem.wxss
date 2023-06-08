@@ -1,0 +1,32 @@
+/* 账本页面的明细项 */
+.trans-record {
+    margin: 10rpx 16rpx;
+    border: 2rpx var(--border-line-thin) solid;
+    border-radius: 10rpx;
+}
+.trans-top, .trans-bottom {
+    display: flex;
+    position: relative;
+    margin: 30rpx;
+}
+.trans-channel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28rpx;
+}
+.trans-tag {
+    color: #787878;
+    font-size: 28rpx;
+}
+.trans-amount, .trans-amount-income {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.trans-amount {
+  color: #d03dfd;
+}
+.trans-amount-income {
+    color: #4bda92
+}
