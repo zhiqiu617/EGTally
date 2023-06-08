@@ -71,6 +71,10 @@ export const store = observable({
       }
     } else {
       // 默认直接添加到userBills
+      // 升序排序
+      bills.sort(function(a, b) {
+        return new Date(a.transDate) - new Date(b.transDate)
+      })
       this.userBills.push(...bills)
     }
     console.log('当前交易记录：', this.userBills.slice());

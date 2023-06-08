@@ -172,7 +172,7 @@ Page({
     // 根据分类的id筛选对应的摘要数据
     let abstractList = this.data.transAbstractsAll.filter(item => 
       item.categoryId == this.data.currentCategoryId)
-    abstractList[0].checked = true
+    this.tapButtonChecked(abstractList, abstractList[0].id)
     this.setData({
       transAbstracts: abstractList
     })
@@ -263,7 +263,7 @@ Page({
     // 根据分类的id筛选对应的摘要数据
     let abstractList = this.data.transAbstractsAll.filter(item => 
       item.categoryId == this.data.currentCategoryId)
-    abstractList[0].checked = true
+    this.tapButtonChecked(abstractList, abstractList[0].id)
     this.setData({
       transAbstracts: abstractList
     })
